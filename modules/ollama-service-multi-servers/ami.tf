@@ -42,7 +42,7 @@ data "aws_ami" "dlami_x86" {
   # Release notes: https://docs.aws.amazon.com/dlami/latest/devguide/appendix-ami-release-notes.html
 
   most_recent = true
-  name_regex  = "^Deep Learning^  *Amazon Linux*"
+  name_regex  = "^Deep Learning *Amazon Linux*"
   owners      = ["amazon"]
 
   filter {
