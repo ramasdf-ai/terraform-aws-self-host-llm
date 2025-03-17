@@ -3,7 +3,7 @@ data "aws_ami" "dlami_arm" {
   # Release notes: https://docs.aws.amazon.com/dlami/latest/devguide/appendix-ami-release-notes.html
 
   most_recent = true
-  name_regex  = "^Deep Learning ARM64 AMI OSS Nvidia Driver GPU PyTorch.*"
+  name_regex  = "^Deep Learning ARM64 AMI OSS.*"
   owners      = ["amazon"]
 
   filter {
@@ -42,7 +42,7 @@ data "aws_ami" "dlami_x86" {
   # Release notes: https://docs.aws.amazon.com/dlami/latest/devguide/appendix-ami-release-notes.html
 
   most_recent = true
-  name_regex  = "^Deep Learning OSS Nvidia Driver AMI GPU PyTorch .*Amazon Linux 2.*"
+  name_regex  = "^Deep Learning  *Amazon Linux 2.*"
   owners      = ["amazon"]
 
   filter {
