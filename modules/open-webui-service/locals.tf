@@ -23,4 +23,8 @@ locals {
       var.open_webui_domain_ssl_cert_arn != ""
     )
   }
+  # tags
+  tags = {
+    "system-module" = "ollama-open-webui"
+  }
 }

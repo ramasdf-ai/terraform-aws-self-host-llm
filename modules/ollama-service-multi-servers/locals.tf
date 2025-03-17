@@ -72,4 +72,8 @@ locals {
       var.api_gw_domain_ssl_cert_arn != ""
     ) ? var.api_gw_disable_execute_endpoint : false
   }
+    # tags
+  tags = {
+    "system-module" = "ollama-aws-ssm-doc"
+  }
 }

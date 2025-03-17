@@ -9,23 +9,23 @@ llm_ec2_configs = [
   {
     llm_model     = "gemma2:9b"
     instance_type = "g4ad.xlarge"
-    ami_id        = ""
+    ami_id        = "ami-080b4a9b6e048125e"
     ebs_volume_gb = 149
     app_port      = 11434
     spot_price    = "0.145"
   },
   {
     llm_model     = "qwen2:7b"
-    instance_type = "g4n.xlarge"
-    ami_id        = ""
+    instance_type = "g4ad.xlarge"
+    ami_id        = "ami-080b4a9b6e048125e"
     ebs_volume_gb = 149
     app_port      = 11434
     spot_price    = "0.145"
   },
   {
     llm_model     = "llama3.1:8b"
-    instance_type = "g4n.xlarge"
-    ami_id        = ""
+    instance_type = "g4ad.xlarge"
+    ami_id        = "ami-080b4a9b6e048125e"
     ebs_volume_gb = 149
     app_port      = 11434
     spot_price    = "0.145"
