@@ -1,8 +1,6 @@
 locals {
   ami_id = {
-    "g5g" : data.aws_ami.dlami_arm.id,
-    "g4dn" : data.aws_ami.dlami_x86.id,
-    "g5" : data.aws_ami.dlami_x86.id,
+    "g4ad" : data.aws_ami.dlami_x86.id,
   }
 
   ec2_iamr_policies = [
