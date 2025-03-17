@@ -111,9 +111,14 @@ resource "aws_instance" "llm" {
     volume_size           = each.value.ebs_volume_gb
     volume_type           = "gp3"
   }
+
   tags = {
     System = "${var.prefix}"
     Name   = each.value.use_as_main_ec2 ? "${var.prefix}-main-${each.value.llm_model}" : "${var.prefix}-${each.value.llm_model}"
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 }
 

@@ -1,5 +1,5 @@
-region                    = "ap-southeast-1"
-azs                       = ["ap-southeast-1a", "ap-southeast-1b"]
+region                    = "us-west-2"
+azs                       = ["us-west-2a", "us-west-2b"]
 vpc_private_subnets_cidrs = ["172.31.48.0/20", "172.31.64.0/20"]
 vpc_private_subnets_names = ["private-48-1a", "private-64-1b"]
 vpc_public_subnets_cidrs  = ["172.31.0.0/20", "172.31.16.0/20"]
@@ -8,25 +8,28 @@ vpc_public_subnets_names  = ["public-0-1a", "public-16-1b"]
 llm_ec2_configs = [
   {
     llm_model     = "gemma2:9b"
-    instance_type = "g5g.xlarge"
+    instance_type = "g4ad.xlarge"
     ami_id        = ""
-    ebs_volume_gb = 200
+    ebs_volume_gb = 149
     app_port      = 11434
+    spot_price    = "0.145"
   },
   {
     llm_model     = "qwen2:7b"
-    instance_type = "g5g.xlarge"
+    instance_type = "g4n.xlarge"
     ami_id        = ""
-    ebs_volume_gb = 200
+    ebs_volume_gb = 149
     app_port      = 11434
+    spot_price    = "0.145"
   },
-  # {
-  #   llm_model     = "llama3.1:8b"
-  #   instance_type = "g5g.xlarge"
-  #   ami_id        = ""
-  #   ebs_volume_gb = 200
-  #   app_port      = 11434
-  # },
+  {
+    llm_model     = "llama3.1:8b"
+    instance_type = "g4n.xlarge"
+    ami_id        = ""
+    ebs_volume_gb = 149
+    app_port      = 11434
+    spot_price    = "0.145"
+  },
 ]
 
 create_api_gw                   = true

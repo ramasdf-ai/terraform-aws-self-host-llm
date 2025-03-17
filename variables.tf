@@ -1,13 +1,13 @@
 variable "region" {
   description = "AWS region for setup"
   type        = string
-  default     = "ap-southeast-1"
+  default     = "us-west-2"
 }
 
 variable "azs" {
   description = "List of AWS availability zone to deploy the VPC hosting Ollama and Open webui"
   type        = list(string)
-  default     = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
+  default     = ["us-west-2", "us-west-2b", "us-west-2c"]
 }
 
 # VPC related
